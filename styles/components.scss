@@ -1,0 +1,64 @@
+@import "mixins";
+
+.card {
+    background: $theme-primary-light;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
+    transition: 0.25s ease-in-out;
+
+    &:hover {
+        background: $theme-primary-light-hover;
+
+        img {
+            transform: scale(1.1);
+        }
+    }
+
+    .article {
+        text-decoration: none;
+        color: $body-text;
+    }
+    .article-extra-details {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 12px;
+        min-height: 24px;
+        margin-bottom: 8px;
+
+        .article-tags {
+            display: flex;
+
+            .article-tag {
+                background: $theme-primary;
+                font-size: 10px;
+                padding: 3px 5px;
+                border-radius: 4px;
+
+                &:not(:last-child) {
+                    margin-right: 6px;
+                }
+            }
+        }
+    }
+    .article-img {
+        position: relative;
+        height: 210px;
+        margin-bottom: 15px;
+
+        img {
+            transition: 0.15s ease-in-out;
+        }
+    }
+
+    .article-title {
+        margin-bottom: 15px;
+        letter-spacing: 1px;
+        font-weight: bold;
+        color: $highlight-red;
+    }
+    
+    .article-body {
+        @include text-clamp(4);
+    }
+}
