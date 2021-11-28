@@ -1,23 +1,21 @@
 @import "mixins";
 
-.card {
+.article-item {
+    display: flex;
+    margin-top: 20px;
+}
+
+.article {
+    text-decoration: none;
+    color: $body-text !important;
+}
+
+.article-card {
     background: $theme-primary-light;
     padding: 20px;
     box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
     transition: 0.25s ease-in-out;
 
-    &:hover {
-        background: $theme-primary-light-hover;
-
-        img {
-            transform: scale(1.1);
-        }
-    }
-
-    .article {
-        text-decoration: none;
-        color: $body-text;
-    }
     .article-extra-details {
         display: flex;
         align-items: center;
@@ -28,22 +26,19 @@
 
         .article-tags {
             display: flex;
+        }
+        
+        .article-tag {
+            background: $theme-primary;
+            border-radius: 4px;
 
-            .article-tag {
-                background: $theme-primary;
-                font-size: 10px;
-                padding: 3px 5px;
-                border-radius: 4px;
-
-                &:not(:last-child) {
-                    margin-right: 6px;
-                }
+            &:not(:last-child) {
+                margin-right: 6px;
             }
         }
     }
     .article-img {
         position: relative;
-        height: 210px;
         margin-bottom: 15px;
 
         img {
@@ -55,10 +50,72 @@
         margin-bottom: 15px;
         letter-spacing: 1px;
         font-weight: bold;
-        color: $highlight-red;
+        color: $highlight-purple;
+
+        &--detailed {
+            font-size: 50px;
+            margin-bottom: 25px;
+        }
     }
+
+    &--preview {
+        &:hover {
+            background: $theme-primary-light-hover;
     
-    .article-body {
-        @include text-clamp(4);
+            img {
+                transform: scale(1.1);
+            }
+        }
+
+        .article-top {
+            .article-tag {
+                padding: 3px 5px;
+                font-size: 10px;
+            }
+        }
+        .article-body {
+            @include text-clamp(4);
+        }
+    }
+
+    &--detailed {
+        .article-top {
+            display: flex;
+            flex-direction: column-reverse;
+
+            .article-extra-details {
+                justify-content: flex-start;
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+
+            .article-tag {
+                padding: 3px 12px;
+                font-size: 15px;
+                background: $theme-border;
+            }
+
+            .article-date {
+                margin-left: 18px;
+            }
+        }
+        .article-title {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+        .article-author {
+            width: fit-content;
+            background: $theme-primary;
+            font-size: 14px;
+            border-radius: 4px;
+            padding: 6px;
+            margin-bottom: 10px;
+
+            span {
+                color: $highlight-red;
+                font-weight: bold;
+                letter-spacing: 1px;
+            }
+        }
     }
 }

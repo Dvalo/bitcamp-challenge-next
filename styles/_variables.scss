@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap');
 
 $theme-primary: #191927;
+
+$theme-primary-dark: #14141e;
 
 $theme-primary-light: #29293a;
 
@@ -8,4 +11,11 @@ $theme-primary-light-hover: #2d2d40;
 
 $body-text: #d0d0d3;
 
+$theme-border: rgba(255, 255, 255, 0.05);
+
+$highlight-purple: #786fa6;
 $highlight-red: #f5464f;
+
+
+$font-body: 'Karla', sans-serif;
+$font-heading: 'Source Sans Pro', sans-serif;

@@ -2,6 +2,8 @@ $body-bg: $theme-primary;
 
 $body-color: $body-text;
 
-$font-family-base: 'Karla', sans-serif;
+$font-family-base: $font-body;
+
+$headings-font-family: $font-heading;
 
 @import "~bootstrap/scss/bootstrap";
