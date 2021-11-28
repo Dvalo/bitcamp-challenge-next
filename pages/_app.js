@@ -1,7 +1,12 @@
-import '../styles/main.scss'
+import Layout from "../layout/Layout";
+import "../styles/main.scss";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  );
 }
 
-export default MyApp
+export default MyApp;
