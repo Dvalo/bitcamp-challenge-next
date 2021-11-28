@@ -7,7 +7,13 @@ function Header() {
     <header>
       <Container>
         <div className="header-inner">
-          <Image src="/logo.jpg" alt="BitCamp" width="192" height="40" />
+          <a
+            href="https://forum.bitcamp.ge/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Image src="/logo.jpg" alt="BitCamp" width="192" height="40" />
+          </a>
           <nav>
             <ul>
               <li>
