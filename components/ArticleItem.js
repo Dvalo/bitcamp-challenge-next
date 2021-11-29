@@ -19,7 +19,7 @@ function ArticleItem({ articleDetails, cardType }) {
               .slice(0, articleTags)
               .map((tag) => (
                 <div className="article-tag" key={tag}>
-                  {tag}
+                  {tag.toLocaleLowerCase()}
                 </div>
               ))}
           </div>
