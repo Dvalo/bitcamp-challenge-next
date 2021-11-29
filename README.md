@@ -5,7 +5,7 @@
 After following docker setup steps [bitcamp-challenge-docker](https://github.com/Dvalo/bitcamp-challenge-docker), proceed with following:
 
 * Clone the bitcamp-challenge-next repo.
-* Install the dependencies.
+* Run ```npm install``` Install the dependencies.
 * Run ```npm run dev or yarn dev``` to run the development server.
 
 First, run the development server:
