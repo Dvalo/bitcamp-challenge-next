@@ -14,7 +14,7 @@ Open [http://localhost:3000](http://localhost:3000) to view the page.
 
 
 ## Preview
-![Articles Listing](https://i.imgur.com/aIcbfuq.png)
+![Articles Listing](https://i.imgur.com/iY7Zj3B.png)
 
 
-![Article Page](https://i.imgur.com/wlVaqsV.png)
+![Article Page](https://i.imgur.com/HkNWhEx.png)
