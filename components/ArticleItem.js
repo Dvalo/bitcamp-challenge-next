@@ -10,8 +10,8 @@ function ArticleItem({ articleDetails, cardType }) {
     <Card
       className={
         cardType === "detailed"
-          ? "article-card article-card--detailed"
-          : "article-card article-card--preview"
+          ? "main-card article-card article-card--detailed"
+          : "main-card article-card article-card--preview"
       }
     >
       <div className="article-top">

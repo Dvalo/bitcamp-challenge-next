@@ -11,3 +11,9 @@ export async function fetchArticle(articleId) {
     (res) => res.json()
   );
 }
+
+export async function fetchArticleComments(articleId) {
+  return await fetch(`${API_PATH}/api/comments/${articleId}`).then(
+    (res) => res.json()
+  );
+}
