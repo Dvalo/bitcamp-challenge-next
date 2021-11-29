@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { Card } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser, faCommentAlt } from "@fortawesome/free-solid-svg-icons";
 
 function ArticleItem({ articleDetails, cardType }) {
   const articleTags = cardType === "detailed" ? 10 : 3;
@@ -49,6 +51,18 @@ function ArticleItem({ articleDetails, cardType }) {
         className="article-body"
         dangerouslySetInnerHTML={{ __html: articleDetails.body }}
       />
+      {cardType === "preview" && (
+        <div className="article-footer">
+          <div className="article-footer-detail article-author">
+            <FontAwesomeIcon icon={faUser} className="article-icon" />
+            {articleDetails.uid}
+          </div>
+          <div className="article-footer-detail article-comment-count">
+            <FontAwesomeIcon icon={faCommentAlt} className="article-icon" />
+            {articleDetails.comment_count}
+          </div>
+        </div>
+      )}
     </Card>
   );
 }

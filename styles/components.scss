@@ -77,6 +77,32 @@
         .article-body {
             @include text-clamp(4);
         }
+        .article-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 12px;
+            padding-top: 8px;
+            border-top: 1px solid $theme-border;
+
+            .article-footer-detail {
+                display: flex;
+                align-items: center;
+
+                &:not(:last-child) {
+                    margin-right: 16px;
+                }
+            }
+            .article-icon {
+                width: 11px;
+                margin-right: 6px;
+
+                &.large {
+                    width: 16px;
+                    color: $highlight-red;
+                }
+            }
+        }
     }
 
     &--detailed {
